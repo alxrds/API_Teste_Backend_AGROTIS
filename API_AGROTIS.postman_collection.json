@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "75d5196f-6657-4715-b1c1-d21905c5108d",
+		"name": "API_AGROTIS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17945273"
+	},
+	"item": [
+		{
+			"name": "Lista Usuários",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/usuario",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Propriedades",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/propriedade",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"propriedade"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Laboratórios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/laboratorio",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"laboratorio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria Usuário",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"nome\": \"Jon doe\",\r\n        \"dataInicial\": \"2022-02-02T17:41:44.000+00:00\",\r\n        \"dataFinal\": \"2022-02-02T17:41:44.000+00:00\",\r\n        \"infosPropriedade\": {\r\n            \"id\": 1\r\n        },\r\n        \"cnpj\": \"XX.XXX.XXX/0001-XX\",\r\n        \"laboratorio\": {\r\n            \"id\": 2\r\n        },\r\n        \"observacoes\": \"Observacao exemplo de teste\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/usuario",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria Propriedade",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Exemplo da fazenda\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/propriedade",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"propriedade"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria Laboratório",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Laboratorio exemplo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/laboratorio",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"laboratorio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edita Usuário",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"nome\": \"Jon doe 2\",\r\n        \"dataInicial\": \"2022-02-02T17:41:44.000+00:00\",\r\n        \"dataFinal\": \"2022-02-02T17:41:44.000+00:00\",\r\n        \"infoPropriedade\": {\r\n            \"id\": 1\r\n        },\r\n        \"cnpj\": \"XX.XXX.XXX/0001-XX\",\r\n        \"laboratorio\": {\r\n            \"id\": 2\r\n        },\r\n        \"observacoes\": \"Observacao exemplo de teste\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/usuario/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edita Propriedade",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"nome\": \"Nome da Propriedade 32\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/propriedade/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"propriedade",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edita Laboratório",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"nome\": \"Nome do Laboratório\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/laboratorio/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"laboratorio",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exclui Usuário",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/usuario/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exclui Propriedade",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/propriedade/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"propriedade",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exclui Laboratório",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/laboratorio/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"laboratorio",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
